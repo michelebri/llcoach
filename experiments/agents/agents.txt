@@ -1,0 +1,33 @@
+ROBOT: Agents that can perform actions in the environment. They can be of one of the following types:
+STRIKER, GOALIE, JOLLY
+
+STRIKER: The striker robot is responsible for scoring goals. 
+            It is allowed to perform ONLY the following actions:
+                pass_the_ball
+                kick_to_goal
+                moves
+                
+
+GOALIE: The goalie robot is responsible for blocking goals. 
+            It is allowed to perform ONLY the following actions:
+                block_the_ball
+                pass_the_ball
+                moves
+
+JOLLY: The robot useful in the soccer game action. 
+            It is allowed to perform ONLY the following actions:
+                pass_the_ball
+                kick_to_goal
+                go_to_position
+                wait_for_pass
+                moves
+                
+TEAMS are described according to their components
+    OWN_TEAM
+        OWN_TEAM_STRIKER is the striker robot of the own team
+        OWN_TEAM_GOALIE is the goalie robot of the own team
+        OWN_TEAM_JOLLY is the jolly robot of the own team
+    OPPONENT_TEAM
+        OPPONENT_TEAM_STRIKER is the striker robot of the own team
+        OPPONENT_TEAM_GOALIE is the goalie robot of the own team
+        OPPONENT_TEAM_JOLLY is the jolly robot of the own team

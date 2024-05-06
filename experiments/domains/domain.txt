@@ -1,0 +1,18 @@
+
+PLANNING DOMAIN
+
+DESCRIPTION
+    Autonomous robots playing soccer. Two opposing teams. The robots need to score goals in the opponent's goal area.
+    The robots cannot move as quickly and nimbly as humans avoids complicated plans.
+
+WAYPOINTS: The waypoints are the points in the field where the robots can move to.
+        CENTER_CIRCLE: Middle of the field.
+        OUR_GOAL: Our team's goal area.
+        MIDFIELD_LINE: Divides the field in half.
+        OPPONENT_GOAL: Opponent's goal area.
+        DEFENSIVE_THIRD: Our defensive zone.
+        OFFENSIVE_THIRD: Our attacking zone near the opponent's goal.
+        CORNER_FLAG: Corner of the field.
+        PENALTY_BOX: Area for penalties near the goal.
+BALL: The ball is a physical object that can be kicked by the robots. The ball can be at any waypoint.
+

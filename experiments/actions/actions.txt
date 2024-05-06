@@ -1,0 +1,39 @@
+ACTION_ID: move_agent
+DESCRIPTION: AGENT goes to the given WAYPOINT.
+ARGS: AGENT : ROBOT robot_destination: WAYPOINT
+PRECONDITIONS: AGENT is at a waypoint different from robot_destination
+EFFECTS: ROBOT is at waypoint robot_destination
+
+
+ACTION_ID: kick_the_ball
+DESCRIPTION: AGENT kicks the ball to a destination.
+ARGS: AGENT : ROBOT ball_destination: WAYPOINT
+PRECONDITIONS: AGENT is at the same waypoint as BALL. HINT: AGENT should move to the ball position before performing this action.
+EFFECTS: BALL is at ball_destination
+
+
+ACTION_ID: kick_to_goal
+DESCRIPTION: AGENT kicks the ball to the opponent's goal attempting to score a goal.
+ARGS: AGENT : ROBOT
+PRECONDITIONS: AGENT is at the same WAYPOINT as BALL. HINT: AGENT should move to the ball position before performing this action.
+EFFECTS: BALL is at WAYPOINT_OPPONENT_GOAL OWN_TEAM scores a goal
+
+
+ACTION_ID: pass_the_ball
+DESCRIPTION: The SENDER is AGENT and the RECEIVER is a teammate. The SENDER passes the ball to the RECEIVER.
+ARGS: AGENT : ROBOT RECEIVER: ROBOT
+PRECONDITIONS: AGENT is at the same waypoint as BALL. HINT: AGENT should move to the ball position before performing this action.
+                    RECEIVER is not OWN_TEAM_STRIKER
+                    RECEIVER is a teammate
+EFFECTS: BALL is at same waypoint as RECEIVER
+
+
+ACTION_ID: block_the_ball
+DESCRIPTION: The goalie blocks the ball from entering the goal.
+ARGS: AGENT : ROBOT 
+PRECONDITIONS: AGENT is at the same waypoint as BALL. HINT: AGENT should move to the ball position before performing this action.
+               AGENT is OWN_GOALIE AGENT is at WAYPOINT_OWN_GOAL
+EFFECTS: BALL is at a waypoint different from WAYPOINT_OWN_GOAL
+
+
+
